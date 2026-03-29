@@ -1,99 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrashMapr Terms of Service</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service — CleanClik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { color: #2e7d32; }
-        h2 { color: #388e3c; margin-top: 2em; }
-        .effective-date { color: #666; font-style: italic; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:        #080d08;
+            --border:    rgba(255,255,255,0.07);
+            --white:     #ffffff;
+            --secondary: rgba(255,255,255,0.55);
+            --muted:     rgba(255,255,255,0.28);
+            --green:     #4a9b5f;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--secondary);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 0 1.5rem 6rem;
+        }
+
+        /* ── Nav ── */
+        nav {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 2rem 0 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-back {
+            font-size: 0.78rem;
+            color: var(--muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-back:hover { color: var(--secondary); }
+
+        /* ── Prose ── */
+        .prose {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .doc-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 500;
+            letter-spacing: -0.04em;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--white);
+            margin-top: 3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            font-size: 0.9rem;
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        li { margin-bottom: 0.4rem; }
+
+        strong {
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .caps {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 3rem 0;
+        }
+
+        footer {
+            max-width: 680px;
+            margin: 4rem auto 0;
+            font-size: 0.75rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        footer a { color: var(--muted); text-decoration: none; }
+        footer a:hover { color: var(--secondary); }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; }
+        }
     </style>
 </head>
 <body>
-    <h1>TrashMapr Terms of Service</h1>
-    <p class="effective-date">Effective Date: January 21, 2026</p>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing or using the TrashMapr mobile application ("App") provided by MaybeCoded ("we," "us," or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not access or use the App.</p>
-    <p>Your use of the App is also governed by our Privacy Policy, available at https://cleanclik.com/trashmapr/privacy_policy.html, which is incorporated into these Terms by reference.</p>
+    <nav>
+        <span class="nav-brand">CleanClik</span>
+    </nav>
 
-    <h2>2. Eligibility</h2>
-    <p>You must be at least 18 years of age to use this App. By using the App, you represent and warrant that you are at least 18 years old and have the legal capacity to enter into these Terms. If you are under 18 years of age, you are prohibited from using the App.</p>
+    <div class="prose">
 
-    <h2>3. Description of Service</h2>
-    <p>TrashMapr is a mobile application that allows users to photograph and map locations of litter and trash. The App uses artificial intelligence to classify trash density in uploaded images. Users may view a map of trash reports submitted by the community.</p>
+        <p class="doc-label">Legal</p>
+        <h1>Terms of Service</h1>
+        <p class="meta">Effective January 21, 2026</p>
 
-    <h2>4. User Accounts</h2>
-    <p>To use certain features of the App, you must create an account using Google Sign-In or Apple Sign-In. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.</p>
+        <p>By accessing or using the CleanClik mobile application (the "App") provided by MaybeCoded ("we," "us," or "our"), you agree to be bound by these Terms. If you do not agree, you may not use the App. Use is also governed by our Privacy Policy, incorporated herein by reference.</p>
 
-    <h2>5. User-Generated Content</h2>
-    <p>By uploading photographs or other content to the App ("User Content"), you grant us a non-exclusive, worldwide, royalty-free, sublicensable, and transferable license to use, reproduce, distribute, prepare derivative works of, display, and perform your User Content in connection with the App and our business operations.</p>
-    <p>You represent and warrant that you own or have the necessary rights to submit your User Content and that your User Content does not violate any third-party rights or applicable laws.</p>
+        <div class="divider"></div>
 
-    <h2>6. Prohibited Conduct</h2>
-    <p>You agree not to:</p>
-    <ul>
-        <li>Upload content that is illegal, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable</li>
-        <li>Upload content that infringes any patent, trademark, trade secret, copyright, or other proprietary rights of any party</li>
-        <li>Upload content that contains nudity, sexually explicit material, or pornography</li>
-        <li>Upload content depicting violence, gore, or harm to individuals or animals</li>
-        <li>Impersonate any person or entity or falsely state or misrepresent your affiliation with a person or entity</li>
-        <li>Use the App for any illegal purpose or in violation of any local, state, national, or international law</li>
-        <li>Interfere with or disrupt the App or servers or networks connected to the App</li>
-        <li>Attempt to gain unauthorized access to any portion of the App or any other systems or networks</li>
-        <li>Use any automated means to access the App or collect any information from the App</li>
-        <li>Harass, abuse, or harm other users</li>
-        <li>Submit false or misleading trash reports</li>
-    </ul>
+        <h2>1. Eligibility</h2>
+        <p>You must be at least 18 years old and have the legal capacity to enter into these Terms. Use by those under 18 is prohibited.</p>
 
-    <h2>7. Content Moderation</h2>
-    <p>We reserve the right, but are not obligated, to review, monitor, and remove User Content at our sole discretion and without notice. We may remove any content that violates these Terms or that we find objectionable for any reason. We utilize automated systems and manual review to moderate content.</p>
-    <p>Users may report objectionable content using the reporting feature within the App. We aim to review and act on reports within 24 hours. Users who repeatedly violate these Terms may have their accounts suspended or terminated.</p>
+        <h2>2. Description of Service</h2>
+        <p>CleanClik lets users photograph and map locations of litter and trash. The App uses AI to classify trash density in uploaded images. Users may view a community map of submitted reports.</p>
 
-    <h2>8. Reporting and Blocking</h2>
-    <p>The App provides mechanisms for users to report objectionable content and block other users. We encourage users to report any content that violates these Terms. Abuse of reporting features may result in account suspension.</p>
+        <h2>3. User Accounts</h2>
+        <p>Certain features require an account via Google Sign-In or Apple Sign-In. You are responsible for maintaining confidentiality of your credentials and all activity under your account. Notify us immediately of any unauthorized use.</p>
 
-    <h2>9. Intellectual Property</h2>
-    <p>The App and its original content (excluding User Content), features, and functionality are and will remain the exclusive property of MaybeCoded. The App is protected by copyright, trademark, and other intellectual property laws. Our trademarks may not be used in connection with any product or service without our prior written consent.</p>
+        <h2>4. User-Generated Content</h2>
+        <p>By uploading photographs or other content ("User Content"), you grant us a non-exclusive, worldwide, royalty-free, sublicensable, and transferable license to use, reproduce, distribute, prepare derivative works of, display, and perform your User Content in connection with the App and our operations.</p>
+        <p>You represent and warrant that you own or have the necessary rights to submit your User Content and that it does not violate any third-party rights or applicable laws.</p>
 
-    <h2>10. Disclaimer of Warranties</h2>
-    <p>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR COURSE OF PERFORMANCE.</p>
-    <p>We do not warrant that the App will be uninterrupted, secure, or error-free, that defects will be corrected, or that the App or the servers that make the App available are free of viruses or other harmful components.</p>
-    <p>The accuracy of AI-generated trash classifications is not guaranteed. Such classifications are provided for informational purposes only.</p>
+        <h2>5. Prohibited Conduct</h2>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Upload illegal, harmful, threatening, abusive, defamatory, or otherwise objectionable content</li>
+            <li>Upload content that infringes intellectual property rights of any party</li>
+            <li>Upload nudity, sexually explicit material, violence, or gore</li>
+            <li>Impersonate any person or entity or misrepresent your affiliation</li>
+            <li>Use the App for any illegal purpose or in violation of any applicable law</li>
+            <li>Interfere with or disrupt the App, servers, or connected networks</li>
+            <li>Attempt unauthorized access to any portion of the App or its systems</li>
+            <li>Use automated means to access the App or collect information from it</li>
+            <li>Harass, abuse, or harm other users</li>
+            <li>Submit false or misleading trash reports</li>
+        </ul>
 
-    <h2>11. Limitation of Liability</h2>
-    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MAYBECODED, ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
-    <ul>
-        <li>Your access to or use of or inability to access or use the App</li>
-        <li>Any conduct or content of any third party on the App</li>
-        <li>Any User Content obtained from the App</li>
-        <li>Unauthorized access, use, or alteration of your transmissions or content</li>
-    </ul>
-    <p>IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS EXCEED THE AMOUNT YOU HAVE PAID US IN THE PAST TWELVE MONTHS, OR ONE HUNDRED DOLLARS ($100), WHICHEVER IS GREATER.</p>
+        <h2>6. Content Moderation</h2>
+        <p>We reserve the right to review, monitor, and remove User Content at our sole discretion and without notice. We use automated systems and manual review. Users may report objectionable content in-app; we aim to act within 24 hours. Repeated violations may result in account suspension or termination.</p>
 
-    <h2>12. Indemnification</h2>
-    <p>You agree to defend, indemnify, and hold harmless MaybeCoded and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees, arising out of or in any way connected with your access to or use of the App, your User Content, or your violation of these Terms.</p>
+        <h2>7. Reporting and Blocking</h2>
+        <p>The App provides mechanisms to report objectionable content and block other users. Abuse of reporting features may result in account suspension.</p>
 
-    <h2>13. Termination</h2>
-    <p>We may terminate or suspend your account and access to the App immediately, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the App will immediately cease.</p>
-    <p>You may delete your account at any time through the App settings. Upon account deletion, your User Content may be removed from the App, though we may retain certain information as required by law or for legitimate business purposes.</p>
+        <h2>8. Intellectual Property</h2>
+        <p>The App and its original content (excluding User Content) remain the exclusive property of MaybeCoded, protected by copyright, trademark, and other intellectual property laws. Our trademarks may not be used without prior written consent.</p>
 
-    <h2>14. Governing Law</h2>
-    <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in India.</p>
+        <h2>9. Disclaimer of Warranties</h2>
+        <p class="caps">THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE. THE ACCURACY OF AI-GENERATED TRASH CLASSIFICATIONS IS NOT GUARANTEED AND IS PROVIDED FOR INFORMATIONAL PURPOSES ONLY.</p>
 
-    <h2>15. Changes to Terms</h2>
-    <p>We reserve the right to modify or replace these Terms at any time at our sole discretion. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect by posting the updated Terms within the App or by other reasonable means. Your continued use of the App after such changes constitutes your acceptance of the new Terms.</p>
+        <h2>10. Limitation of Liability</h2>
+        <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MAYBECODED SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OR INABILITY TO USE THE APP, ANY THIRD-PARTY CONDUCT, OR UNAUTHORIZED ACCESS TO YOUR CONTENT. TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU HAVE PAID US IN THE PAST TWELVE MONTHS OR $100, WHICHEVER IS GREATER.</p>
 
-    <h2>16. Severability</h2>
-    <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be modified to the minimum extent necessary to make it enforceable, and the remaining provisions will continue in full force and effect.</p>
+        <h2>11. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless MaybeCoded and its officers, directors, employees, and agents from claims, liabilities, damages, and expenses — including reasonable attorneys' fees — arising from your use of the App, your User Content, or your violation of these Terms.</p>
 
-    <h2>17. Entire Agreement</h2>
-    <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and MaybeCoded regarding the App and supersede all prior agreements and understandings.</p>
+        <h2>12. Termination</h2>
+        <p>We may terminate or suspend your account immediately, without notice, for any reason including breach of these Terms. You may delete your account at any time through App settings. Certain information may be retained as required by law.</p>
 
-    <h2>18. Contact Us</h2>
-    <p>If you have any questions about these Terms, please contact us at:</p>
-    <p>Email: dev@maybecoded.com</p>
+        <h2>13. Governing Law</h2>
+        <p>These Terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of courts in India.</p>
+
+        <h2>14. Changes to Terms</h2>
+        <p>We may modify these Terms at any time. Material changes will be communicated at least 30 days in advance via the App or other reasonable means. Continued use after changes constitutes acceptance.</p>
+
+        <h2>15. Severability</h2>
+        <p>If any provision is found unenforceable, it will be modified to the minimum extent necessary, and the remaining provisions will continue in full force.</p>
+
+        <h2>16. Entire Agreement</h2>
+        <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and MaybeCoded regarding the App.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about these Terms? Reach us at <a href="mailto:dev@maybecoded.com">dev@maybecoded.com</a>.</p>
+
+    </div>
+
+    <footer>
+        <span>© 2025 MaybeCoded</span>
+    </footer>
+
 </body>
 </html>
